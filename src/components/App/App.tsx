@@ -41,7 +41,7 @@ export default function App() {
       <SearchBar onSubmit={handleSearch} />
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
-      {movies.length > 0 && (<MovieGrid movies={movies} onClick={(movie) => setSelectedMovie(movie)} />)}
+      {movies.length > 0 && (<MovieGrid movies={movies} onSelect={(movie) => setSelectedMovie(movie)} />)}
       {selectedMovie && (<MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />)}
     </>
   );
